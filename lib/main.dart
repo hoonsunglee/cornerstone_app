@@ -6,10 +6,11 @@ var lg = Logger();
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(App());
+  runApp(const App());
 }
 
 class App extends StatefulWidget {
+  const App({super.key});
   @override
   State<App> createState() => _AppState();
 }
