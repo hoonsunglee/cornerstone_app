@@ -260,13 +260,13 @@
       "languageVersion": "2.14"
     },
     {
-      "name": "CornerApp",
+      "name": "cornerstone_app",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-06-13T08:40:46.096732Z",
+  "generated": "2023-06-14T06:27:45.295060Z",
   "generator": "pub",
   "generatorVersion": "2.19.6"
 }
