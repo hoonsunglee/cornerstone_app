@@ -4,20 +4,20 @@
   'case-sensitive': 'false',
   'roots': [{
     'type': 'directory',
-    'name': "/Users/hoonsungle88/CornerApp/build/macos/Build/Products/Debug/FirebaseCoreInternal/FirebaseCoreInternal.framework/Modules"
+    'name': "/Users/hoonsungle88/cornerstone_app/build/macos/Build/Products/Debug/FirebaseCoreInternal/FirebaseCoreInternal.framework/Modules"
     'contents': [{
       'type': 'file',
       'name': "module.modulemap",
-      'external-contents': "/Users/hoonsungle88/CornerApp/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseCoreInternal.build/unextended-module.modulemap",
+      'external-contents': "/Users/hoonsungle88/cornerstone_app/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseCoreInternal.build/unextended-module.modulemap",
     }]
     },
     {
     'type': 'directory',
-    'name': "/Users/hoonsungle88/CornerApp/build/macos/Build/Products/Debug/FirebaseCoreInternal/FirebaseCoreInternal.framework/Headers"
+    'name': "/Users/hoonsungle88/cornerstone_app/build/macos/Build/Products/Debug/FirebaseCoreInternal/FirebaseCoreInternal.framework/Headers"
     'contents': [{
       'type': 'file',
       'name': "FirebaseCoreInternal-Swift.h",
-      'external-contents': "/Users/hoonsungle88/CornerApp/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseCoreInternal.build/unextended-interface-header.h",
+      'external-contents': "/Users/hoonsungle88/cornerstone_app/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseCoreInternal.build/unextended-interface-header.h",
     }]
     }]
 }

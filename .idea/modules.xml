@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CornerApp.iml" filepath="$PROJECT_DIR$/CornerApp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/android/CornerApp_android.iml" filepath="$PROJECT_DIR$/android/CornerApp_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cornerstone_app.iml" filepath="$PROJECT_DIR$/cornerstone_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/cornerstone_app_android.iml" filepath="$PROJECT_DIR$/android/cornerstone_app_android.iml" />
     </modules>
   </component>
 </project>

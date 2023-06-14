@@ -1,4 +1,4 @@
-# CornerApp
+# cornerstone_app
 
 A new Flutter project.
 

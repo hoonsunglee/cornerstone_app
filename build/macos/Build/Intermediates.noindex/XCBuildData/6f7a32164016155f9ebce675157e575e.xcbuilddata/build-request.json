@@ -9,7 +9,7 @@
       "guid" : "18c1723432283e0cc55f10a6dcfd9e02a26d6e580d3222b86d62fb80ec380c14"
     }
   ],
-  "containerPath" : "/Users/hoonsungle88/CornerApp/macos/Runner.xcworkspace",
+  "containerPath" : "/Users/hoonsungle88/cornerstone_app/macos/Runner.xcworkspace",
   "continueBuildingAfterErrors" : false,
   "enableIndexBuildArena" : false,
   "hideShellScriptEnvironment" : false,
@@ -29,21 +29,21 @@
       "targetArchitecture" : "arm64"
     },
     "arenaInfo" : {
-      "buildIntermediatesPath" : "/Users/hoonsungle88/CornerApp/build/macos/Build/Intermediates.noindex",
-      "buildProductsPath" : "/Users/hoonsungle88/CornerApp/build/macos/Build/Products",
-      "derivedDataPath" : "/Users/hoonsungle88/CornerApp/build/macos",
-      "indexDataStoreFolderPath" : "/Users/hoonsungle88/CornerApp/build/macos/Index.noindex/DataStore",
+      "buildIntermediatesPath" : "/Users/hoonsungle88/cornerstone_app/build/macos/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/hoonsungle88/cornerstone_app/build/macos/Build/Products",
+      "derivedDataPath" : "/Users/hoonsungle88/cornerstone_app/build/macos",
+      "indexDataStoreFolderPath" : "/Users/hoonsungle88/cornerstone_app/build/macos/Index.noindex/DataStore",
       "indexEnableDataStore" : true,
-      "indexPCHPath" : "/Users/hoonsungle88/CornerApp/build/macos/Index.noindex/PrecompiledHeaders",
-      "pchPath" : "/Users/hoonsungle88/CornerApp/build/macos/Build/Intermediates.noindex/PrecompiledHeaders"
+      "indexPCHPath" : "/Users/hoonsungle88/cornerstone_app/build/macos/Index.noindex/PrecompiledHeaders",
+      "pchPath" : "/Users/hoonsungle88/cornerstone_app/build/macos/Build/Intermediates.noindex/PrecompiledHeaders"
     },
     "configurationName" : "Debug",
     "overrides" : {
       "commandLine" : {
         "table" : {
           "COMPILER_INDEX_STORE_ENABLE" : "NO",
-          "OBJROOT" : "/Users/hoonsungle88/CornerApp/build/macos/Build/Intermediates.noindex",
-          "SYMROOT" : "/Users/hoonsungle88/CornerApp/build/macos/Build/Products"
+          "OBJROOT" : "/Users/hoonsungle88/cornerstone_app/build/macos/Build/Intermediates.noindex",
+          "SYMROOT" : "/Users/hoonsungle88/cornerstone_app/build/macos/Build/Products"
         }
       },
       "synthesized" : {

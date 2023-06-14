@@ -5,18 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "CornerApp",
+            "name": "cornerstone_app",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "CornerApp (profile mode)",
+            "name": "cornerstone_app (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "CornerApp (release mode)",
+            "name": "cornerstone_app (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"
