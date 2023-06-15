@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:logger/logger.dart';
-import 'sheets.dart';
 import 'Screens/home.dart';
 var lg = Logger();
 void main() async {
