@@ -1,6 +1,6 @@
 {
   "name": "cornerstone_app",
-  "image": "google/dart:latest",
+  "image": "cirrusci/flutter:beta",
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash"
   },
