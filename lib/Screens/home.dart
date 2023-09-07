@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cornerstone_app/sheets.dart';
-
+import 'package:cornerstone_app/widgets/navigation_bar_b.dart';
+import 'package:gsheets/gsheets.dart';
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -9,7 +10,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  
   bool showtitle = true;
 
   void toggle() {
@@ -23,17 +23,10 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            showtitle ? const MyLargeTitle() : const Text("lol"),
-            IconButton(
-                onPressed: toggle,
-                icon: const Icon(Icons.remove_circle_outline))
-          ],
-        ),
-      ),
+      body: 
+          Center(
+            child: BottomNav(),
+            ),
     );
   }
 }

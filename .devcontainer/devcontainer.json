@@ -1,0 +1,13 @@
+{
+  "name": "cornerstone_app",
+  "image": "google/dart:latest",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "forwardPorts": [3000],
+  "postCreateCommand": "flutter doctor",
+  "extensions": [
+    "dart-code.dart-code",
+    "dart-code.flutter"
+  ]
+}
