@@ -25,7 +25,7 @@ class _AppState extends State<App> {
               titleLarge: TextStyle(
         color: Colors.red[300],
       ))),
-      home: const HomeScreen(),
+      home: HomeScreen(),
 
     );
     return materialApp;
