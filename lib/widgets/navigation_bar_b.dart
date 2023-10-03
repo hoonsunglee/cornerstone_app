@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:line_icons/line_icons.dart';
 
 class BottomNav extends StatefulWidget {
-  const BottomNav({super.key});
+  final int selectedIndex;
+  final Function(int) onTabChange;
+
+  const BottomNav(
+      {required this.selectedIndex, required this.onTabChange, Key? key})
+      : super(key: key);
 
   @override
   State<BottomNav> createState() => _BottomNavState();
@@ -27,60 +31,58 @@ class _BottomNavState extends State<BottomNav> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: AnimatedContainer(
-        duration: const Duration(milliseconds: 300),
-        color: colors[selectedIndex],
-        child: Center(
-          child: Container(
-            decoration: BoxDecoration(
-              color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                  spreadRadius: -10,
-                  blurRadius: 60,
-                  color: Colors.black.withOpacity(.20),
-                  offset: const Offset(0, 15),
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 30),
+      height: MediaQuery.of(context).size.height * 0.1,
+      child: Center(
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                spreadRadius: -10,
+                blurRadius: 60,
+                color: Colors.black.withOpacity(.20),
+                offset: const Offset(0, 15),
+              )
+            ],
+          ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+            child: GNav(
+              gap: 8,
+              color: Colors.grey[800],
+              activeColor: Colors.purple,
+              iconSize: 24,
+              tabBackgroundColor: Colors.purple.withOpacity(0.1),
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+              duration: const Duration(milliseconds: 200),
+              tabs: const [
+                GButton(
+                  haptic: true,
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
+                GButton(
+                  haptic: true,
+                  icon: Icons.record_voice_over_rounded,
+                  text: 'EOP',
+                ),
+                GButton(
+                  haptic: true,
+                  icon: Icons.school_rounded,
+                  text: 'School',
+                ),
+                GButton(
+                  haptic: true,
+                  icon: Icons.account_circle_rounded,
+                  text: 'Profile',
                 )
               ],
-            ),
-            child: Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 16.0, vertical: 25),
-              child: GNav(
-                gap: 8,
-                color: Colors.grey[800],
-                activeColor: Colors.purple,
-                iconSize: 24,
-                tabBackgroundColor: Colors.purple.withOpacity(0.1),
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
-                duration: const Duration(milliseconds: 1000),
-                tabs: const [
-                  GButton(
-                    icon: LineIcons.home,
-                    text: 'Home',
-                  ),
-                  GButton(
-                    icon: LineIcons.heart,
-                    text: 'Likes',
-                  ),
-                  GButton(
-                    icon: LineIcons.search,
-                    text: 'Search',
-                  ),
-                  GButton(
-                    icon: LineIcons.user,
-                    text: 'Profile',
-                  )
-                ],
-                selectedIndex: selectedIndex,
-                onTabChange: (index) {
-                  setState(() {
-                    selectedIndex = index;
-                  });
-                },
-              ),
+              selectedIndex: widget.selectedIndex,
+              onTabChange: (index) {
+                widget.onTabChange(index); // Notify the parent
+              },
             ),
           ),
         ),

@@ -1,42 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:cornerstone_app/sheets.dart';
-import 'package:cornerstone_app/widgets/navigation_bar_b.dart';
-import 'package:gsheets/gsheets.dart';
-class HomeScreen extends StatelessWidget {
+import 'package:cornerstone_app/src/sheets.dart';
+
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Column(
-          children: <Widget>[
-            Container(
-              margin:
-              const EdgeInsets.symmetric(horizontal: 25.0, vertical: 15.0),
-              child: _buildAppNavBar(context),
-            ),
-          ],
-        ),
-      ),
-    );
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  bool showtitle = true;
+  void hello() {
+    getData();
   }
 
-  Row _buildAppNavBar(BuildContext context) => Row(
-    children: <Widget>[
-      InkWell(
-        child: _buildAppBarButton(context, Icons.arrow_back_ios),
-        onTap: () {
-          Navigator.pop(context);
-        },
-      ),
-      Spacer(),
-      _buildAppBarButton(context, Icons.menu),
-    ],
-  );
+  void toggle() {
+    setState(() {
+      getData();
+      showtitle = !showtitle;
+    });
+  }
 
-  Container _buildAppBarButton(BuildContext context, IconData icon) =>
-      Container(
-        width: 40.0,
-        height: 40.0,
-        child: Icon(icon, color: Colors.blueGrey[200],)
-      );
+  @override
+  Widget build(BuildContext context) {
+    return const Text("Hello Home Screen!");
+  }
 }

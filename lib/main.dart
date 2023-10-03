@@ -1,7 +1,12 @@
+import 'package:cornerstone_app/widgets/navigation_bar_b.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:logger/logger.dart';
 import 'Screens/home.dart';
+import 'Screens/eop.dart';
+import 'Screens/profile.dart';
+import 'Screens/school.dart';
+
 var lg = Logger();
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,18 +21,38 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
+  int selectedIndex = 0;
+  final List<Widget> pages = const [
+    HomeScreen(),
+    EopScreen(),
+    SchoolScreen(),
+    ProfileScreen()
+  ];
 
   @override
   Widget build(BuildContext context) {
     var materialApp = MaterialApp(
-      theme: ThemeData(
-          textTheme: TextTheme(
-              titleLarge: TextStyle(
-        color: Colors.red[300],
-      ))),
-      home: HomeScreen(),
-
-    );
+        theme: ThemeData(
+            textTheme: TextTheme(
+                titleLarge: TextStyle(
+          color: Colors.amber[700],
+        ))),
+        home: SafeArea(
+          child: Scaffold(
+            body: IndexedStack(
+              index: selectedIndex,
+              children: pages,
+            ),
+            bottomNavigationBar: BottomNav(
+              selectedIndex: selectedIndex,
+              onTabChange: (index) {
+                setState(() {
+                  selectedIndex = index;
+                });
+              },
+            ),
+          ),
+        ));
     return materialApp;
   }
 }
