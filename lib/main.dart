@@ -6,11 +6,14 @@ import 'Screens/home.dart';
 import 'Screens/eop.dart';
 import 'Screens/profile.dart';
 import 'Screens/school.dart';
+import 'firebase_options.dart';
 
 var lg = Logger();
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const App());
 }
 
@@ -43,14 +46,7 @@ class _AppState extends State<App> {
               index: selectedIndex,
               children: pages,
             ),
-            bottomNavigationBar: BottomNav(
-              selectedIndex: selectedIndex,
-              onTabChange: (index) {
-                setState(() {
-                  selectedIndex = index;
-                });
-              },
-            ),
+            bottomNavigationBar: const ResponsiveBottomNav(),
           ),
         ));
     return materialApp;
