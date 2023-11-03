@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class CustomNavigationBar extends StatefulWidget {
   final int selectedIndex;
@@ -30,6 +31,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
         ],
         selectedIndex: widget.selectedIndex,
         onDestinationSelected: (int index) {
+          HapticFeedback.mediumImpact();
           widget.onSelected(index);
         },
       ),

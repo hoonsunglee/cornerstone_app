@@ -1,6 +1,7 @@
 import 'package:cornerstone_app/widgets/custom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'color_schemes.g.dart';
 import 'Screens/home.dart';
 import 'Screens/eop.dart';
 import 'Screens/profile.dart';
@@ -35,10 +36,13 @@ class _AppState extends State<App> {
   Widget build(BuildContext context) {
     var materialApp = MaterialApp(
         theme: ThemeData(
-            textTheme: TextTheme(
-                titleLarge: TextStyle(
-          color: Colors.amber[700],
-        ))),
+          colorScheme: lightColorScheme,
+          useMaterial3: true,
+        ),
+        darkTheme: ThemeData(
+          colorScheme: darkColorScheme,
+          useMaterial3: true,
+        ),
         home: SafeArea(
           child: Scaffold(
             body: PageView(
