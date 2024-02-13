@@ -35,36 +35,37 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     var materialApp = MaterialApp(
-        theme: ThemeData(
-          colorScheme: lightColorScheme,
-          useMaterial3: true,
-        ),
-        darkTheme: ThemeData(
-          colorScheme: darkColorScheme,
-          useMaterial3: true,
-        ),
-        home: SafeArea(
-          child: Scaffold(
-            body: PageView(
-              controller: _pageController,
-              physics: const NeverScrollableScrollPhysics(),
-              children: pages, // This line prevents swipe navigation
-            ),
-            bottomNavigationBar: CustomNavigationBar(
-              selectedIndex: screenIndex,
-              onSelected: (index) {
-                setState(() {
-                  screenIndex = index;
-                });
-                _pageController.animateToPage(
-                  index,
-                  duration: const Duration(milliseconds: 300),
-                  curve: Curves.easeInOut,
-                );
-              },
-            ),
+      theme: ThemeData(
+        colorScheme: lightColorScheme,
+        useMaterial3: true,
+      ),
+      darkTheme: ThemeData(
+        colorScheme: darkColorScheme,
+        useMaterial3: true,
+      ),
+      home: Scaffold(
+        body: SafeArea(
+          child: PageView(
+            controller: _pageController,
+            physics: const NeverScrollableScrollPhysics(),
+            children: pages, // This line prevents swipe navigation
           ),
-        ));
+        ),
+        bottomNavigationBar: CustomNavigationBar(
+          selectedIndex: screenIndex,
+          onSelected: (index) {
+            setState(() {
+              screenIndex = index;
+            });
+            _pageController.animateToPage(
+              index,
+              duration: const Duration(milliseconds: 300),
+              curve: Curves.easeInOut,
+            );
+          },
+        ),
+      ),
+    );
     return materialApp;
   }
 }

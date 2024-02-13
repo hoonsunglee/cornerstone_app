@@ -31,7 +31,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
         ],
         selectedIndex: widget.selectedIndex,
         onDestinationSelected: (int index) {
-          HapticFeedback.mediumImpact();
+          HapticFeedback.lightImpact();
           widget.onSelected(index);
         },
       ),
