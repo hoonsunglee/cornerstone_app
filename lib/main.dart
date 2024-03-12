@@ -27,8 +27,8 @@ class _AppState extends State<App> {
   final PageController _pageController = PageController();
   final List<Widget> pages = const [
     HomeScreen(),
-    EopScreen(),
     SchoolScreen(),
+    EopScreen(),
     ProfileScreen()
   ];
 
